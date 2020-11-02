@@ -1,0 +1,15 @@
+from flask import Flask, render_template, redirect
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+app.config["SQLALCHEMY_DATABASE_URI"] ="postgresql://postgres:123@localhost:5432/realestate_db"
+
+db = SQLAlchemy(app)
+
+
+
+
+SELECT cl.price, cl.address, cl.postal_code, s.walk_score, s.bike_score, s.transit_score
+FROM calgary AS cl
+JOIN score AS s ON cl.postal_code = s.postal_code

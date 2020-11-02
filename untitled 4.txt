@@ -1,0 +1,5 @@
+JAVASCRIPT CODES
+
+Keep a copy
+var collectionCopy = JSON.parse(JSON.stringify(collection))
+

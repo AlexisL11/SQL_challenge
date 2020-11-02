@@ -1,0 +1,27 @@
+CREATE TABLE calgary (
+			id SERIAL PRIMARY KEY,
+			price INT,
+			address VARCHAR(100),
+			postal_code VARCHAR(10),
+			bedrooms VARCHAR(20),
+			bath VARCHAR(20),
+			property_type VARCHAR(20)
+						
+)
+
+
+CREATE TABLE score (
+			id SERIAL PRIMARY KEY,
+			postal_code VARCHAR(10),
+			walk_score INT,
+			transit_score INT,
+			bike_score INT
+)
+
+
+CREATE TABLE score (
+			postal_code VARCHAR(10) PRIMARY KEY,
+			walk_score INT,
+			transit_score INT,
+			bike_score INT
+)
